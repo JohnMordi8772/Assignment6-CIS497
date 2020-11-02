@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ John Mordi
+ Assignment #6
+ Example of a singleton.
+		 */
+using UnityEngine;
 using System.Collections;
 
 public class Singleton<T> : MonoBehaviour where T : Singleton<T>

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ John Mordi
+ Assignment #6
+ Representation of a child class.
+		 */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

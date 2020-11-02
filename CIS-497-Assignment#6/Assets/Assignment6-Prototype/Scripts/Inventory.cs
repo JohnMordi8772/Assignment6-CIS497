@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ John Mordi
+ Assignment #6
+ Example of serialization.
+		 */
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 

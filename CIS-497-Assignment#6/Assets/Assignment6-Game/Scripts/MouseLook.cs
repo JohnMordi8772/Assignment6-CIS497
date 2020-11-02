@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ John Mordi
+ Assignment #6
+ Allows player to look around using the mouse.
+		 */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

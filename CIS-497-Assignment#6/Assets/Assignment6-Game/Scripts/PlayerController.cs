@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ John Mordi
+ Assignment #6
+ Allows the player to control their character and actually play the game.
+		 */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,12 +12,12 @@ public class PlayerController : MonoBehaviour
     public CharacterController controller;
     public float speed = 12f;
 
-    //variables for gravity
+    
     public Vector3 velocity;
     public float gravity = -9.8f;
     public float gravityMultiplier = 2f;
 
-    //variables to check if on ground
+    
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -25,10 +30,10 @@ public class PlayerController : MonoBehaviour
         gravity *= gravityMultiplier;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        //check if player is on the ground
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
@@ -46,10 +51,9 @@ public class PlayerController : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        //add gravity to velocity
+        
         velocity.y += gravity * Time.deltaTime;
-        //we multiply velocity by Time.deltaTime again to
-        //simulate gravity accelerating in a free fall
+        
         controller.Move(velocity * Time.deltaTime);
     }
 }

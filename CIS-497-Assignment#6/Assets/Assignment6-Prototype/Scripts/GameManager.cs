@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/*
+ John Mordi
+ Assignment #6
+ Manages menus and scene loading.
+		 */
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 

@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ John Mordi
+ Assignment #6
+ Manages the tutorial for the game.
+		 */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

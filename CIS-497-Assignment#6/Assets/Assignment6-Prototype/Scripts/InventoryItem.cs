@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ John Mordi
+ Assignment #6
+ Example of OOP in C#.
+		 */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

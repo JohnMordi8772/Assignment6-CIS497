@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ John Mordi
+ Assignment #6
+ Examples of polymorphism and composition.
+		 */
+using UnityEngine;
 using System.Collections;
 
 public class Weapon : MonoBehaviour
