@@ -7,15 +7,13 @@ using UnityEngine.UI;
 public class TutorialScript : MonoBehaviour
 {
     public Text tutorialText;
-    
+
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        if(SceneManager.GetActiveScene().name.Equals("Tutorial"))
-        {
-            StartCoroutine(TutorialFuntions());
-        }
+                StartCoroutine(TutorialFuntions());
     }
+
 
     IEnumerator TutorialFuntions()
     {
@@ -54,7 +52,16 @@ public class TutorialScript : MonoBehaviour
 
         yield return null;
 
-        tutorialText.text = "And lastly, the goal of the game is to gather as many collectables as you can on your way to the end of the level.";
+        tutorialText.text = "If you click the P button, it will open up the pause menu where you are able to go back to the main menu or restart a level.";
+
+        while (!Input.GetButtonDown("Fire1"))
+        {
+            yield return null;
+        }
+
+        yield return null;
+
+        tutorialText.text = "And lastly, the goal of the game is to gather as many collectables as you can on your way to the large elevated platform without falling.";
 
         while (!Input.GetButtonDown("Fire1"))
         {
@@ -73,6 +80,15 @@ public class TutorialScript : MonoBehaviour
         yield return null;
 
         tutorialText.text = "Spheres simply increase your score, while cylinders give you points for upgrades if you beat the level after collecting them.";
+
+        while (!Input.GetButtonDown("Fire1"))
+        {
+            yield return null;
+        }
+
+        yield return null;
+
+        tutorialText.text = "If you do fall, you will have to go to the pause menu and click restart to try again.";
 
         while (!Input.GetButtonDown("Fire1"))
         {

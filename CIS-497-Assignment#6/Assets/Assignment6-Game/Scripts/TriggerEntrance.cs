@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TriggerEntrance : MonoBehaviour
 {
+    private int score = 0, skillPoints = 0;
     public Text text;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,16 @@ public class TriggerEntrance : MonoBehaviour
         if(other.CompareTag("Finish"))
         {
             text.text = "You win!";
+        }
+        if(other.CompareTag("ScoreCollectable"))
+        {
+            score++;
+            Destroy(other.gameObject);
+        }
+        if(other.CompareTag("SkillCollectable"))
+        {
+            skillPoints++;
+            Destroy(other.gameObject);
         }
     }
 }

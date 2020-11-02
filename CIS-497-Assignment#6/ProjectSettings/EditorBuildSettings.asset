@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assignment6-Prototype/Scenes/Level3.unity
     guid: d7f19955777cc914b83d147d6f2975af
+  - enabled: 1
+    path: Assets/Assignment6-Game/Scenes/MainMenuGame.unity
+    guid: 7ccbe48551ced694499ab6e8dc12eda2
+  - enabled: 1
+    path: Assets/Assignment6-Game/Scenes/Tutorial.unity
+    guid: dd1df6c95b0c81541a1cf6093007dc88
+  - enabled: 1
+    path: Assets/Assignment6-Game/Scenes/Level1Game.unity
+    guid: 36318a08061120c4f93c9a79cc53d365
+  - enabled: 1
+    path: Assets/Assignment6-Game/Scenes/Level2Game.unity
+    guid: 126e90082a260814bbd3840c3a775d7e
   m_configObjects: {}
