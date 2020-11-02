@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, Jumpin
 {
     public CharacterController controller;
     public float speed = 12f;
@@ -30,7 +30,14 @@ public class PlayerController : MonoBehaviour
         gravity *= gravityMultiplier;
     }
 
-    
+    public void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+    }
+
     void Update()
     {
         
@@ -46,12 +53,8 @@ public class PlayerController : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
+        Jump();
 
-        
         velocity.y += gravity * Time.deltaTime;
         
         controller.Move(velocity * Time.deltaTime);

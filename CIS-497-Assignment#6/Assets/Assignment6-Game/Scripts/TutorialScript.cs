@@ -84,7 +84,7 @@ public class TutorialScript : MonoBehaviour
 
         yield return null;
 
-        tutorialText.text = "Spheres simply increase your score, while cylinders give you points for upgrades if you beat the level after collecting them.";
+        tutorialText.text = "Spheres simply increase your score, while cylinders give you points for upgrades(not implemented yet) if you beat the level after collecting them.";
 
         while (!Input.GetButtonDown("Fire1"))
         {
